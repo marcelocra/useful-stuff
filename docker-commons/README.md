@@ -9,7 +9,7 @@ Add the following lines to you Dockerfile:
 ```docker
 # TODO(marcelocra): use a shorter version of the URL.
 # TODO(marcelocra): update url to deno files in my system.
-RUN wget -O docker-commons https://github.com/marcelocra/useful-stuff/releases/download/v0.0.1-alpha/docker-commons
+RUN wget -O docker-commons https://github.com/marcelocra/useful-stuff/releases/download/v0.0.1/docker-commons
 RUN ./docker-commons
 ```
 
