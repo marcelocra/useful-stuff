@@ -3,13 +3,8 @@
 This repo is a gathering of standalone helpers, scripts and ideas that I'm
 using across projects.
 
-Each folder has a separate `README.md` file documenting things, but here's a
-summary:
-
-## `pet-linux`
-
-An alpine-based Docker env. If you are not familiar with alpine,
-it is a linux distro that has around 5mb size but is very functional.
+Each folder should have a separate `README.md` file documenting things, but
+here's a summary:
 
 ## `docker-commons`
 
@@ -23,3 +18,8 @@ This should help avoid that problem.
 
 Note: I used the `docker-commons` binary to manage common stuff for this top
 level `Dockerfile` and it worked great.
+
+## `pet-linux`
+
+An alpine-based Docker env. If you are not familiar with alpine,
+it is a linux distro that has around 5mb size but is very functional.
