@@ -1,4 +1,4 @@
-/** 
+/**
  * Does everything related to the installation process of system packages, like
  * updating the local registry (e.g. apt-get update).
  */
@@ -13,6 +13,7 @@ const commands = [
   { cmd: updateSystemRepositories },
   { cmd: [...installPackage, "curl"] },
   { cmd: [...installPackage, "less"] },
+  { cmd: [...installPackage, "git"] },
   { cmd: [...installPackage, "vim"] },
   { cmd: [...installPackage, "tmux"] },
   { cmd: [...installPackage, "unzip"] },
@@ -30,7 +31,9 @@ export default async function installSystemPackages() {
 
       if (!status.success) {
         console.log(
-          `Command: ${command.cmd.join(" ")} | Failed with code: ${status.code}`
+          `Command: ${
+            command.cmd.join(" ")
+          } | Failed with code: ${status.code}`,
         );
       }
     } catch (_err) {
