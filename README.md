@@ -20,3 +20,6 @@ Usually I just copy/paste things around, but there's always something that gets
 lost and I have to waste time finding it.
 
 This should help avoid that problem.
+
+Note: I used the `docker-commons` binary to manage common stuff for this top
+level `Dockerfile` and it worked great.
