@@ -51,3 +51,29 @@ To develop:
    comment in `src/mod.ts` if you are having problems.
 
    `$ docker build --no-cache=true --tag my-image .`
+
+## Next features
+
+Quick:
+
+- [ ] Add `fnm install 16.14.2` and `npm install --global yarn` to
+      `install_fnm.ts` and then install **Yarn**
+- [ ] Change the command prompt to be more legible (showing at least date,
+      current directory and breaking a line)
+- [ ] Refactor the `install_system_packages.ts` to use one single command,
+      instead of several
+- [ ] Think about a solution for the user not having `wget` nor `curl` in the
+      target machine. That would prevent them from downloading the
+      `docker-commons` file. One idea is to use `python3` and `urllib.request`
+      as [shown in this SO answer](https://stackoverflow.com/a/22776/1814970)
+
+A bit more complicated:
+
+- [ ] Make the `install_fnm.ts` more generic, to allow installing other tools
+      that use the same method (like Deno, Linuxbrew, etc)
+- [ ] Allow command line customization to select what should and what shouldn't
+      be installed
+
+Need investigation:
+
+- [ ] Install Neovim
