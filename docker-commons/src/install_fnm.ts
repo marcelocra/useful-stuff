@@ -13,13 +13,14 @@
  * $ node
  */
 import { join } from "./deps.ts";
+import { USER_HOME_DIR_PATH } from "./constants.ts";
 
 // const INSTALL_SCRIPT_URL = "https://deno.land/install.sh";
 const INSTALL_SCRIPT_URL = "https://fnm.vercel.app/install";
 
 export default async function installFNM() {
   const fnmInstallScriptPath = join(
-    Deno.env.get("HOME")!,
+    USER_HOME_DIR_PATH,
     "fnm_install.sh",
   );
 

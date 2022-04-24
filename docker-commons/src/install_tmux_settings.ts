@@ -4,6 +4,7 @@
  * The config is downloaded from GitHub and placed in the appropriate location.
  */
 import { join } from "./deps.ts";
+import { USER_HOME_DIR_PATH } from "./constants.ts";
 
 // TODO(marcelocra): update path to use short alias.
 const TMUX_CONFIG_URL =
@@ -22,7 +23,7 @@ export default async function installTmuxSettings() {
   }
 
   const tmuxConfig = await tmuxConfigResponse.text();
-  const homeFolderPath = Deno.env.get("HOME");
+  const homeFolderPath = USER_HOME_DIR_PATH;
 
   // Try to get the user HOME path, which is where tmux config is. Bail out if
   // the user doesn't have a HOME path defined.
