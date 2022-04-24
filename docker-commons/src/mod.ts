@@ -43,6 +43,7 @@ IMPORTANT: It seems like this respects Docker cache. When I tested it, changing
 import installSystemPackages from "./install_system_packages.ts";
 import installTmuxSettings from "./install_tmux_settings.ts";
 import installFNM from "./install_fnm.ts";
+import installBashPromptLine from "./install_bash_prompt_line.ts";
 
 // Right now, it needs to run in this order, as FNM needs some system packages
 // for it to install. It would be interesting to think of a way not to have that
@@ -50,3 +51,4 @@ import installFNM from "./install_fnm.ts";
 await installSystemPackages();
 await installTmuxSettings();
 await installFNM();
+await installBashPromptLine();
