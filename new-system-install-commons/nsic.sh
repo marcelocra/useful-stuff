@@ -30,6 +30,7 @@ curl -fsSL https://fnm.vercel.app/install | bash
 # We are using bash, so help fnm know that (sometimes it fails to identify
 # automatically).
 sed 's/env/env --shell bash/g' ~/.bashrc
+source ~/.bashrc
 
 # Install latest Node.js LTS.
 fnm install 16.14.2

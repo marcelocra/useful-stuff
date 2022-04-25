@@ -6,18 +6,17 @@ based machines.
 ## How to use
 
 You need a way to download this file in the container, for example with wget,
-curl, python, etc. I'll put examples with these 3 tools here.
+curl, python, etc.
 
 If you can't do that, simply download the raw file and place it in the folder
 where you are building your image.
 
 ```dockerfile
-ARG DOCKER_COMMON_VERSION=v0.2.0
-RUN wget -O docker-commons-${DOCKER_COMMON_VERSION} \
-  https://github.com/marcelocra/useful-stuff/releases/download/v${DOCKER_COMMON_VERSION}/docker-commons
+RUN wget -O nsic.sh \
+  https://raw.githubusercontent.com/marcelocra/useful-stuff/main/nsic/nsic.sh
 # You might need add execution permission.
-RUN chmod +x ./docker-commons-${DOCKER_COMMON_VERSION}
-RUN ./docker-commons-${DOCKER_COMMON_VERSION}
+RUN chmod +x ./nsic.sh
+RUN ./nsic.sh
 ```
 
 Need to do more stuff? Just add to the script!
@@ -26,6 +25,8 @@ Need to do more stuff? Just add to the script!
 
 Quick:
 
+- [ ] Split each installation in a separate script (or perhaps use flags for
+      that?), so that we can benefit from Docker caching
 - [x] Add `fnm install 16.14.2` and `npm install --global yarn` to
       `install_fnm.ts` and then install **Yarn**
 - [x] Change the command prompt to be more legible (showing at least date,
