@@ -1,7 +1,12 @@
-# `docker-commons`
+# New systems install commons
 
-All common setup that I do for my Docker images. Also work for new Debian/Ubuntu
-based machines.
+All common setup that I do for my new system installations. Right now, it is
+only for Debian/Ubuntu (and related) distros, but should work fine for Docker
+containers that are based on them too.
+
+Usually I just copy/paste things around, but I always miss something and can
+never figure out where I had it, so now I won't waste time finding stuff
+anymore.
 
 ## How to use
 
